@@ -1,0 +1,33 @@
+.main{
+    border: 3px solid #ecf0f1;
+    background: #fff;
+}
+.ant-layout-sider-trigger{
+  background: #fff;
+  color: #000;
+  border: 1px solid silver;
+  width: 70px;
+}
+.logo-wrap{
+    padding: 10px 25px;
+    font-size: 23px;
+    font-weight: 600;
+    vertical-align: auto;
+    margin-bottom: 10px;
+}
+.menu-divider{
+    text-align: left;
+    padding-left: 25px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+.item{
+    text-align: left;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.active-item{
+    color: red
+}
+

@@ -6,10 +6,12 @@ import {
     UserOutlined,
   } from '@ant-design/icons';
   import 'antd/dist/antd.css';
-  import './dashboard.scss'
+  import './main.scss'
   import { Breadcrumb, Layout, Row, Col, Menu } from 'antd';
   import moment from 'moment';
-  import Switch from '../components/switch';
+  import Switch from '../components/switch/switch';
+  import Sidebar from '../components/sidebar/sidebar';
+
 
   import React, { useState } from 'react';
   const { Header, Content, Footer, Sider } = Layout;
@@ -46,10 +48,7 @@ import {
           minHeight: '100vh',
         }}
       >
-        <Sider  collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-          <div className="logo" />
-          <Menu theme="white" defaultSelectedKeys={['1']} mode="inline" items={items} />
-        </Sider>
+       <Sidebar />
         <Layout  className="site-layout">
           <Header className="heaser-secction">
           <Row>
@@ -67,13 +66,10 @@ import {
               margin: '0 16px',
             }}
           >
-            <Breadcrumb
-              style={{
-                margin: '16px 0',
-              }}
-            >
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
+            <Breadcrumb style={{margin: '16px 0'}} >
+              <Breadcrumb.Item className='content-header'>
+                Salels overview
+              </Breadcrumb.Item>
             </Breadcrumb>
             <div
               className="site-layout-background"
