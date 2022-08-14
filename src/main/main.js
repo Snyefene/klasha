@@ -57,21 +57,6 @@ import {
             <Routes>
               <Route exact path='/' element={<Dashboard />}></Route>
             </Routes>
-
-            <Breadcrumb style={{margin: '16px 0'}} >
-              <Breadcrumb.Item className='content-header'>
-                Salels overview
-              </Breadcrumb.Item>
-            </Breadcrumb>
-            <div
-              className="site-layout-background"
-              style={{
-                padding: 24,
-                minHeight: 360,
-              }}
-            >
-              Bill is a cat.
-            </div>
           </Content>
           <Footer
             style={{

@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './dashboard.scss';
 import moment from 'moment';
+import { Button } from 'antd';
+import { ArrowDownOutlined} from '@ant-design/icons';
+
 import SelectComponent from '../components/Select';
 import InfoBox from '../components/content/infoBox';
 
@@ -11,9 +14,9 @@ const Dashboard = () => {
 
     const data = [
         {key:1, period:  moment().format('DD-MM-YY'),  hasGraph: false, month:'',  amount: '1,652.50'},
-        {key:1, period:  '24 Aug - 01 Sep 21',  hasGraph: true, month:'This month',  amount: '1,652.50'},
-        {key:1, period:  '24 Aug - 01 Sep 21',  hasGraph: true, month:'This month',  amount: '1,652.50'},
-        {key:1, period:  '24 Aug - 01 Sep 21',  hasGraph: true, month:'Last month',  amount: '1,652.50'},
+        {key:2, period:  '24 Aug - 01 Sep 21',  hasGraph: true, month:'This month',  amount: '₦1,652.50'},
+        {key:3, period:  '24 Aug - 01 Sep 21',  hasGraph: true, month:'This month',  amount: '₦1,652.50'},
+        {key:4, period:  '24 Aug - 01 Sep 21',  hasGraph: true, month:'Last month',  amount: '₦1,652.50'},
     ]
     const period_list = ['Sales', '7 days', '30 days']
 
@@ -39,6 +42,10 @@ const Dashboard = () => {
                  value={currency}
                  onChange={(value)=>setCurrency(value)}
               />
+              <Button className='download-btn'>
+                <ArrowDownOutlined />
+                Download report
+              </Button>
             </div>
         </div>
     )
