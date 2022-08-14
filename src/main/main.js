@@ -19,7 +19,8 @@ import {
 
   import Switch from '../components/switch/switch';
   import Sidebar from '../components/sidebar/sidebar';
-  import Dashboard from '../pages/Dashboard';
+  import Dashboard from '../pages/dashboard/Dashboard';
+  import Transactions from '../pages/transactions';
 
   import React, { useState } from 'react';
   const { Header, Content, Footer, Sider } = Layout;
@@ -56,14 +57,15 @@ import {
           >
             <Routes>
               <Route exact path='/' element={<Dashboard />}></Route>
+              <Route exact path='/Transactions' element={<Transactions />}></Route>
+
             </Routes>
           </Content>
           <Footer
             style={{
-              textAlign: 'center',
-              background:'#fff'
-            }}
-          >
+              textAlign:  'center',
+              background: '#fff'
+            }}>
           </Footer>
         </Layout>
       </Layout>

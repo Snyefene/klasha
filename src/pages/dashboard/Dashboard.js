@@ -4,8 +4,8 @@ import moment from 'moment';
 import { Button } from 'antd';
 import { ArrowDownOutlined} from '@ant-design/icons';
 
-import SelectComponent from '../components/Select';
-import InfoBox from '../components/content/infoBox';
+import SelectComponent from '../../components/Select';
+import InfoBox from '../../components/content/infoBox';
 
 
 const Dashboard = () => {

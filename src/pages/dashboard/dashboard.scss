@@ -8,12 +8,12 @@
     flex-wrap: wrap 
 }
 .info-box{
-    width: 230px;
+    width: 256px;
     min-width: 220px;
-    height: 220px;
-    border-radius: 10px;
-    border: 1px solid silver;
-    margin-right: 50px;
+    height: 240px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    margin-right: 20px;
     margin-bottom: 20px;
     padding: 10px;
     padding-bottom: 20px;
@@ -27,7 +27,7 @@
     color: #fff;
 }
 .info-graph{
-    height: 120px;
+    height: 130px;
 }
 .active-class{
     color: red
@@ -48,18 +48,18 @@
     display: flex;
     flex-wrap: wrap ;
     .big-chart-box{
-      height: 280px;
-      width: 700px;
+      height: 284px;
+      width: 768px;
       border: 1px solid silver;
       margin-right: 20px;
       border-radius: 10px
     }
     .action-box{
-        height: 280px;
-        width: 309px;
+        height: 284px;
+        width: 304px;
         border: 1px solid silver;
-        margin-left: 40px;
-        background: #FF335B;
+        top: 552px;
+        background: #EF2C5A;;
         border-radius: 10px;
         color: #fff;
         padding: 20px;
