@@ -43,7 +43,7 @@ import {
             <Col span={12} align="left">
               Today: {moment().format('DD MMMM, YYYY')}
             </Col>
-            <Col span={12} align="right">
+            <Col span={12} align="right" style={{paddingRight:'40px'}}>
               <Switch value={live} onChange={()=> setLive(!live)} />
               {live && <span>&nbsp;Live  &nbsp;&nbsp;Welcome back, {user}!</span>  }
             </Col>
@@ -61,9 +61,9 @@ import {
           <Footer
             style={{
               textAlign: 'center',
+              background:'#fff'
             }}
           >
-            Ant Design ©2018 Created by Ant UED
           </Footer>
         </Layout>
       </Layout>

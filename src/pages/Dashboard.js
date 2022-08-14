@@ -47,6 +47,20 @@ const Dashboard = () => {
                 Download report
               </Button>
             </div>
+            <div className='bottom-charts-section'>
+               <div className='big-chart-box'>
+                  Chart here
+               </div>
+               <div className='action-box'>
+                  <div>KlashaWire-send</div>
+                  <div>money to businesses</div>
+                  <div>globally from Africa</div>
+
+                  <Button className='send-btn'>
+                    Send a Wire
+                  </Button>
+               </div>
+            </div>
         </div>
     )
 }

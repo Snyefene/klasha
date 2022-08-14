@@ -8,7 +8,7 @@
     flex-wrap: wrap 
 }
 .info-box{
-    width: 220px;
+    width: 230px;
     min-width: 220px;
     height: 220px;
     border-radius: 10px;
@@ -34,7 +34,6 @@
 }
 .sub-section-header{
    padding: 20px;
-   border:1px solid silver;
 }
 .period-list{
     margin-right: 30px;
@@ -44,4 +43,35 @@
     position: relative;
     left: 20%;
     font-weight: 540;
+}
+.bottom-charts-section{
+    display: flex;
+    flex-wrap: wrap ;
+    .big-chart-box{
+      height: 280px;
+      width: 700px;
+      border: 1px solid silver;
+      margin-right: 20px;
+      border-radius: 10px
+    }
+    .action-box{
+        height: 280px;
+        width: 309px;
+        border: 1px solid silver;
+        margin-left: 40px;
+        background: #FF335B;
+        border-radius: 10px;
+        color: #fff;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 450;
+        .send-btn{
+            background: #000;
+            color: #fff;
+            margin-top: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: 'none';
+        }
+    }
 }
