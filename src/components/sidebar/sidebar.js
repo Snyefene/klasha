@@ -20,15 +20,6 @@ const {  Sider  } = Layout;
       label,
     };
   }
-  
-  // const items = [
-  //   getItem('Dashboard', <PieChartOutlined />),
-  //   getItem('Balances',  <DesktopOutlined />),
-  //   getItem('Transactions',  <DesktopOutlined />),
-  //   getItem('Analytics',  <DesktopOutlined />),
-  //   getItem('Marketing',  <DesktopOutlined />),
-  //   getItem('Exchange rates',  <DesktopOutlined />),
-  // ];
   const items = ['Dashboar', 'Balances', 'Transactions', 'Analytics','Marketing']
   
   const Sidebar = () => {
@@ -37,10 +28,8 @@ const {  Sider  } = Layout;
 
     const user = 'Ada'
 
-    console.log('ITESSSSS', active)
-
     return (
-        <Sider className='main'  collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+        <Sider width={350} className='main'  collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
          <div align="left" className='logo-wrap'>
            Klasha
          </div>
