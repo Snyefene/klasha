@@ -4,11 +4,14 @@ export  function setActuveTab(tab) {
         payload: tab
     }
 }
-export function getState() {
+
+export  function setActuvePage(page) {
     return {
-        type: 'GET_STATE'
+        type: 'SET_ACTIVE_PAGE',
+        payload: page
     }
 }
+
 
   
 

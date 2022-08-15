@@ -12,7 +12,7 @@ const dashboardReducer = (state = initialState, action) => {
                 ...state,
                 activePeriod: action.payload
          }
-         case 'SET ACTIVE PAGE':
+         case 'SET_ACTIVE_PAGE':
             return {
                 ...state,
                 activePage: action.payload
