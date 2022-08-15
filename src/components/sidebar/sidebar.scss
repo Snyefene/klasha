@@ -6,10 +6,14 @@ a {
     color: #000;
   }
 .ant-layout-sider-trigger{
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
   background: #fff;
   color: #000;
-  border: 1px solid silver;
-  width: 70px;
+  border: 1px solid #000;
+  max-width: 100px;
+  border-radius: 5px;
 }
 .logo-wrap{
     padding: 10px 25px;
