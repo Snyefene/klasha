@@ -43,30 +43,34 @@ const {  Sider  } = Layout;
            Klasha
          </div>
 
-         <div className='menu-divider' >Main pages</div>
+         <div className='menu-divider' >Main {!collapsed && 'pages'}</div>
          { sidebar_items.main_pages.map((name) => {
           return <Item 
                   key={name} 
                   active={activePage}
                   item={name} 
+                  collapsed={collapsed}
                   onClick={()=>setActivePage(name)}
                 />}) 
            }
         
-         <div className='menu-divider' >Accept payments</div>
+         <div className='menu-divider' >Accept {!collapsed && 'payments'}</div>
          { sidebar_items.accept_payments.map((name) => {
           return <Item 
                   key={name} 
                   item={name} 
+                  collapsed={collapsed}
                   active={activePage}
                   onClick={()=>setActivePage(name)}/>
                 })
          }
          
-         <div className='menu-divider' >Send payments</div>
+         <div className='menu-divider' >Send {!collapsed && 'payments'}</div>
          { sidebar_items.send_payments.map((name) => {
           return <Item 
-                  key={name}item={name}
+                  key={name}
+                  item={name}
+                  collapsed={collapsed}
                   active={activePage}
                   onClick={()=>setActivePage(name)}
             />}) 

@@ -10,7 +10,7 @@ import {
     } 
  from '@ant-design/icons'
 
-const Item = ({item, active, onClick}) => {
+const Item = ({item, collapsed, active, onClick}) => {
     const activeClass = active === item && 'active-item';
     const link = item === 'Dashboard'? '/' : `${item}`
 
@@ -30,7 +30,7 @@ const Item = ({item, active, onClick}) => {
         <Link to={link}>
         <div className={`item ${activeClass}`} onClick={()=> onClick()}>
            {getIcon()}&nbsp;&nbsp;
-           {item}
+           {!collapsed && item}
         </div>
         </Link>
     )
