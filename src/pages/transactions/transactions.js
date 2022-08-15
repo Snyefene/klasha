@@ -3,6 +3,8 @@ import {  Row, Col} from 'antd';
 import Button from '../../components/button';
 import filter from './../../images/filter.png';
 import SearchBar from '../../components/search';
+import Table from '../../components/table/table';
+
 const Transactions = () => {
     const onSearch = (e) => {
        console.log('VALUE', e)
@@ -25,6 +27,7 @@ const Transactions = () => {
                <Button name="Export" />
             </Col>
           </Row>
+          <Table />
         </div>
     )
 }
