@@ -3,6 +3,9 @@ import './dashboard.scss';
 import moment from 'moment';
 import { Button } from 'antd';
 import { ArrowDownOutlined} from '@ant-design/icons';
+import {useSelector, useDispatch} from 'react-redux';
+import {setActuveTab}from '../../redux/actions';
+
 
 import SelectComponent from '../../components/Select';
 import InfoBox from '../../components/content/infoBox';
@@ -10,8 +13,15 @@ import Chart from '../../components/content/chart';
 
 
 const Dashboard = () => {
+    const dispatch = useDispatch();
     const [currency, setCurrency] = useState('USD')
-    const [activePeriod, setActivePeriod] = useState('7 days')
+    const transactions = useSelector((state) => state.counter)
+    const {activePeriod} = useSelector((state) => state.dashboard);
+    console.log('STATE', activePeriod)
+
+    const handleActivePeriod = (tab) => {
+     return dispatch(setActuveTab(tab))
+    }
 
     const data = [
         {key:1, period:  moment().format('DD-MM-YY'),  hasGraph: false, month:'',  amount: '1,652.50'},
@@ -32,7 +42,7 @@ const Dashboard = () => {
                 period_list.map((item) =>{
                     return (
                         <span 
-                          onClick={()=>setActivePeriod(item)}
+                          onClick={()=>handleActivePeriod (item)}
                           className={`period-list ${activePeriod === item && 'active-class'}`}>
                          {item}
                      </span>
