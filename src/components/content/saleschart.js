@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import './chart.scss';
+import './saleschart.scss';
 import {useSelector, useDispatch} from 'react-redux';
 
 
@@ -28,21 +28,15 @@ const Chart = ({key, marginRight, height, chartWidth, type, theme, container}) =
           Highcharts.chart(`${container}`, {
             chart: {
               zoomType: 'x',
-              color: '#000',
               backgroundColor:  theme,
             },
             title: null,
             subtitle: null,
             xAxis: {
-                plotLines: null,
-                lineWidth: 0,
-                tickLength: 0,
-                visible: false,
+                visible: true,
             },
             yAxis: {
                 plotLines: null,
-                gridLineWidth: 0,
-                minorGridLineWidth: 0
             },
             legend: {
               enabled: false
@@ -56,10 +50,6 @@ const Chart = ({key, marginRight, height, chartWidth, type, theme, container}) =
                     x2: 0,
                     y2: 1
                   },
-                  // stops: [
-                  //   [0, Highcharts.getOptions().colors[0]],
-                  //   [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                  // ]
                   stops: [
                     [0, '#fabfcd'],
                     [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
@@ -88,9 +78,9 @@ const Chart = ({key, marginRight, height, chartWidth, type, theme, container}) =
       );
   })
     return (
-        <div className={`info-graph ${height}`} >
+        <div className={`info-graph`} >
              <figure style={{width: chartWidth, marginLeft: -marginRight}} className="highcharts-figure ">
-                <div style={{height:'130px'}} 
+                <div style={{height:'190px'}} 
                   id={`${container}`}></div>
                 </figure>
          </div>
