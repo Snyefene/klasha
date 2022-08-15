@@ -4638,6 +4638,11 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
+gl-matrix@^3.1.0:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
+  integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==
+
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -8376,6 +8381,13 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
+
+simple-line-chart@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/simple-line-chart/-/simple-line-chart-1.1.2.tgz#db918dfcdc122b257d7f8b5f9f5ac70b29c1ed63"
+  integrity sha512-lotOpM6MO5D/eBMH8CgaX5iNc3ce1fPi1eO+OJDIkNmYwD+8cHjRLT7rZ/rTyk6UTKxDhB3A42xR0CZ/o1HIlg==
+  dependencies:
+    gl-matrix "^3.1.0"
 
 sisteransi@^1.0.5:
   version "1.0.5"

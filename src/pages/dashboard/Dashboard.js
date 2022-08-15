@@ -6,6 +6,7 @@ import { ArrowDownOutlined} from '@ant-design/icons';
 
 import SelectComponent from '../../components/Select';
 import InfoBox from '../../components/content/infoBox';
+import Chart from '../../components/content/chart';
 
 
 const Dashboard = () => {
@@ -24,7 +25,7 @@ const Dashboard = () => {
         <div className="dashboard">
             <h3>Sales overview</h3>
             <div className='flex-container'>
-            { data.map((info) => {return <InfoBox  key={info.key} info={info}/>})}
+            { data.map((info) => {return <InfoBox  height={'300px'} key={info.key} info={info}/>})}
             </div>
             <div className='sub-section-header'>
               {
@@ -49,7 +50,7 @@ const Dashboard = () => {
             </div>
             <div className='bottom-charts-section'>
                <div className='big-chart-box'>
-                  Chart here
+                  <Chart container="big-chart-box" />
                </div>
                <div className='action-box'>
                   <div>KlashaWire-send</div>
