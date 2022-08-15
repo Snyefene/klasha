@@ -4,9 +4,11 @@ const Item = ({item, active, onClick}) => {
     const link = item === 'Dashboard'? '/' : `${item}`
 
     return (
+        <Link to={link}>
         <div className={`item ${activeClass}`} onClick={()=> onClick()}>
-          <Link to={link}>{item}</Link>
+           {item}
         </div>
+        </Link>
     )
 }
 export default Item;

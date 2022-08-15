@@ -20,7 +20,7 @@ import {
   import Switch from '../components/switch/switch';
   import Sidebar from '../components/sidebar/sidebar';
   import Dashboard from '../pages/dashboard/Dashboard';
-  import Transactions from '../pages/transactions';
+  import Transactions from '../pages/transactions/transactions';
 
   import React, { useState } from 'react';
   const { Header, Content, Footer, Sider } = Layout;
