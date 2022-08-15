@@ -1,0 +1,14 @@
+.info-graph{
+    margin: auto;
+    text-align: center;
+    // min-width: 230px;
+}
+.highcharts-no-tooltip{
+    display: none;
+}
+.highcharts-axis-title, .highcharts-axis-labels{
+    display: none;
+}
+.highcharts-credits{
+    display: none;
+}

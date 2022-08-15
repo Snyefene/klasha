@@ -4,7 +4,7 @@ import moment from 'moment';
 import { Button } from 'antd';
 import { ArrowDownOutlined} from '@ant-design/icons';
 import {useSelector, useDispatch} from 'react-redux';
-import {setActuveTab, setActuvePage}from '../../redux/actions';
+import {setActuveTab}from '../../redux/actions';
 
 
 import SelectComponent from '../../components/Select';
@@ -15,15 +15,12 @@ import Chart from '../../components/content/chart';
 const Dashboard = () => {
     const dispatch = useDispatch();
     const [currency, setCurrency] = useState('USD')
-    const transactions = useSelector((state) => state.counter)
     const {activePeriod} = useSelector((state) => state.dashboard);
 
     const setActivePeriod = (tab) => {
      return dispatch(setActuveTab(tab))
     }
-    const setActivePage = (page) => {
-      return dispatch(setActuvePage(page))
-     }
+   
 
     const data = [
         {key:1, period:  moment().format('DD-MM-YY'),  hasGraph: false, month:'',  amount: '1,652.50'},
@@ -62,7 +59,7 @@ const Dashboard = () => {
             </div>
             <div className='bottom-charts-section'>
                <div className='big-chart-box'>
-                  <Chart container="big-chart-box" />
+                  <Chart chartWidth={650} type="sales" container="big-chart-box" />
                </div>
                <div className='action-box'>
                   <div>KlashaWire-send</div>
