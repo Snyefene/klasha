@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-  import { Layout, Row, Col,} from 'antd';
+  import { Layout, Select, Row, Col,} from 'antd';
   import moment from 'moment';
 
   import Switch from '../components/switch/switch';
@@ -18,6 +18,14 @@ import {
   } from '@react-hook/window-size';
 
   import React, { useState } from 'react';
+
+
+  const { Option, OptGroup } = Select;
+
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+
   const { Header, Content, Footer, Sider } = Layout;
   
 
@@ -34,7 +42,7 @@ import {
           minHeight: '100vh',
         }}
       >
-       <Sidebar />
+       <Sidebar windowSize={width}/>
         <Layout  className="site-layout">
           <Header className="heaser-secction">
           
@@ -52,7 +60,11 @@ import {
                   <span  style={{ marginTop: width <=500 && '630px'}}>
                     &nbsp;Live  &nbsp;&nbsp;Welcome back, {user}!
                 </span>  
-                }
+                } &nbsp;
+                <Select  prefix={'ddd'}  defaultValue="En" style={{ width: 70, border:'none' }} onChange={handleChange}>
+                <Option value="En">En</Option>
+                    <Option value="IB">IB</Option>
+                </Select>
                 </>
               }
             </Col>

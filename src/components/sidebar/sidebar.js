@@ -33,14 +33,13 @@ const {  Sider  } = Layout;
     const setActivePage = (page) => {
       return dispatch(setActuvePage(page))
      }
-
     return (
         <Sider
            width={350} 
            className='main'  
            collapsible 
            trigger={<CustomTrigger />}
-           collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}
+           collapsed={ collapsed} onCollapse={(value) => setCollapsed(value)}
            >
          <div align="left" className='logo-wrap'>
            Klasha
