@@ -13,7 +13,7 @@ const InfoBox = (props) => {
                     chartWidth={200}
                      marginRight={10}
                     container={key} key={key}
-                    theme={key === 2? '#000' : '#fff'}
+                    theme={key === 2? '#222' : '#fff'}
                 />}
              </div>
             <div>{month}</div>

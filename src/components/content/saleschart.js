@@ -32,10 +32,18 @@ const Chart = ({ marginRight,  chartWidth, type, theme, container}) => {
             title: null,
             subtitle: null,
             xAxis: {
-                visible: true,
+                label: {
+                  enabled: '',
+                },
             },
+           
             yAxis: {
                 plotLines: null,
+                showLastLabel: true,
+                label: {
+                  enabled: '',
+                },
+
             },
             legend: {
               enabled: false
@@ -66,7 +74,6 @@ const Chart = ({ marginRight,  chartWidth, type, theme, container}) => {
                 threshold: null
               }
             },
-      
             series: [{
               type: 'area',
               name: 'USD to EUR',

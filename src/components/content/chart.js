@@ -6,8 +6,7 @@ import {useSelector} from 'react-redux';
 const Chart = ({marginRight, height, chartWidth, type, theme, container}) => {
   const {salesData} = useSelector((state) => state.dashboard);
   const {activePeriod} = useSelector((state) => state.dashboard);
-
-
+  
   const getSalesData = () => {
       if(activePeriod === '7 days'){
         return salesData.sevenDays;
