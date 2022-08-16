@@ -85,7 +85,7 @@ const Chart = ({ height, type, theme, container}) => {
           });
         }
       );
-  })
+  }, [])
     return (
         <div className={`info-graph ${height}`} >
              <figure style={{width: '100%'}} className="highcharts-figure ">
