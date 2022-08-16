@@ -1,26 +1,21 @@
-import {
-    DesktopOutlined,
-    FileOutlined,
-    PieChartOutlined,
-    TeamOutlined,
-    UserOutlined,
-  } from '@ant-design/icons';
+
   import 'antd/dist/antd.css';
   import './main.scss'
   
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from 'react-router-dom';
-  import { Breadcrumb, Layout, Row, Col, Menu } from 'antd';
+  import { Layout, Row, Col,} from 'antd';
   import moment from 'moment';
 
   import Switch from '../components/switch/switch';
   import Sidebar from '../components/sidebar/sidebar';
   import Dashboard from '../pages/dashboard/Dashboard';
   import Transactions from '../pages/transactions/transactions';
+  import {
+    useWindowSize,
+  } from '@react-hook/window-size';
 
   import React, { useState } from 'react';
   const { Header, Content, Footer, Sider } = Layout;
@@ -28,8 +23,10 @@ import {
 
   const Main = () => {
     const [live, setLive] = useState(true);
-    const [collapsed, setCollapsed] = useState(false);
+    const [width] = useWindowSize()
+
     const user = 'Ada'
+
 
     return (
       <Layout
@@ -42,10 +39,11 @@ import {
           <Header className="heaser-secction">
           
           <Row>
-            <Col span={12} align="left">
+            <Col span={width <= 500? 24 : 12} align="left">
               Today: {moment().format('DD MMMM, YYYY')}
             </Col>
-            <Col span={12} align="right" style={{paddingRight:'40px'}}>
+            <Col  span={width <= 500? 24 : 12} align="right" 
+                style={{paddingRight:'40px', marginTop: width <=500 && '-30px'}}>
               <Switch value={live} onChange={()=> setLive(!live)} />
               {live && <span>&nbsp;Live  &nbsp;&nbsp;Welcome back, {user}!</span>  }
             </Col>

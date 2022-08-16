@@ -1,8 +1,7 @@
-import { months } from "moment";
 import Chart from "./chart";
 
 const InfoBox = (props) => {
-    const {period, marginRight, hasGraph, key, amount, month} =  props.info
+    const {period, hasGraph, key, amount, month} =  props.info
     const activeClass = 'darktheme'
     console.log('PROPSSSS', key)
     return (

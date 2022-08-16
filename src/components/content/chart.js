@@ -1,10 +1,9 @@
 import React, {useEffect} from "react";
 import './chart.scss';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 
-const Chart = ({key, marginRight, height, chartWidth, type, theme, container}) => {
-  const {data} = useSelector((state) => state.dashboard);
+const Chart = ({marginRight, height, chartWidth, type, theme, container}) => {
   const {salesData} = useSelector((state) => state.dashboard);
   const {activePeriod} = useSelector((state) => state.dashboard);
 
@@ -19,7 +18,7 @@ const Chart = ({key, marginRight, height, chartWidth, type, theme, container}) =
       return salesData
   }
   useEffect(() => {
-    let  Highcharts = window. Highcharts;
+  let Highcharts = window. Highcharts;
 
     Highcharts.getJSON(
         'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/usdeur.json',

@@ -1,4 +1,4 @@
-import {Input, Space} from 'antd';
+import {Input} from 'antd';
 const Search =  Input.Search;
 const SearchBar  = ({width, onSearch}) => {
     return(

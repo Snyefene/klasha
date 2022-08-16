@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import {
-    SwapOutlined,
     SoundOutlined,
     SyncOutlined,
     PieChartOutlined,
-    DisconnectOutlined,
     ShoppingCartOutlined 
 
     } 

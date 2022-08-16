@@ -1,12 +1,6 @@
-import {
-    DesktopOutlined,
-    FileOutlined,
-    PieChartOutlined,
-    TeamOutlined,
-    UserOutlined,
-  } from '@ant-design/icons';
+
   import './sidebar.scss'
-import {Layout, Row, Col, Menu } from 'antd';
+import {Layout } from 'antd';
 import Item from './item';
 import {useSelector, useDispatch} from 'react-redux';
 import sidebar_items from '../../lists/sidebar_items.js';
@@ -16,18 +10,7 @@ import {setActuvePage}from '../../redux/actions';
 const {  Sider  } = Layout;
 
   
-  function getItem(label, key, icon, children) {
-    return {
-      key,
-      icon,
-      children,
-      label,
-    };
-  }
-  const items = ['Dashboar', 'Balances', 'Transactions', 'Analytics','Marketing']
-  
   const Sidebar = () => {
-    const user = 'Ada'
     const dispatch =  useDispatch();
     const [collapsed, setCollapsed] = useState(false);
     const {activePage} = useSelector((state) => state.dashboard);

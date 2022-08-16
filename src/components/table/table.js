@@ -4,9 +4,7 @@ import './table.scss'
 import { Table as TableComponent, Thead, Tbody, Tr, Th, Td} from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 // import Th from './th';
-import Row from './row';
 import transactions from '../../data/transactions';
-import Transactions from '../../pages/transactions/transactions';
 import CustPagination from './pagination';
 
 export default function Table(props) {

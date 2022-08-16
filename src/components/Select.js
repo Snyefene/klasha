@@ -1,7 +1,7 @@
 
 import { Select } from "antd"
 
-const { Option, OptGroup } = Select;
+const { Option} = Select;
 
 const style={
     width:'80px',
