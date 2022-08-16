@@ -77,7 +77,9 @@ const Chart = ({ marginRight,  chartWidth, type, theme, container}) => {
             series: [{
               type: 'area',
               name: 'USD to EUR',
-              data: type === 'sales'? getSalesData() : data
+              data: type === 'sales'? getSalesData() : data,
+              color: '#EF2C5A',
+              opacity: 0.5
             }]
           });
         }

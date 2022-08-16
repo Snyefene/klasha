@@ -2,8 +2,7 @@ import React, {useEffect} from "react";
 import './chart.scss';
 import {useSelector} from 'react-redux';
 
-
-const Chart = ({ height,  type, theme, container}) => {
+const Chart = ({ height, type, theme, container}) => {
   const {salesData} = useSelector((state) => state.dashboard);
   const {activePeriod} = useSelector((state) => state.dashboard);
   
@@ -26,7 +25,6 @@ const Chart = ({ height,  type, theme, container}) => {
           Highcharts.chart(`${container}`, {
             chart: {
               zoomType: 'x',
-              color: '#000',
               backgroundColor:  theme,
             },
             title: null,
@@ -80,7 +78,9 @@ const Chart = ({ height,  type, theme, container}) => {
             series: [{
               type: 'area',
               name: 'USD to EUR',
-              data: type === 'sales'? getSalesData() : data
+              data: type === 'sales'? getSalesData() : data,
+              color: '#EF2C5A',
+              opacity: 0.5
             }]
           });
         }
