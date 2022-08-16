@@ -1,13 +1,16 @@
 import { Button as ButtonComponent } from "antd";
 
-const Button = ({name, icon}) => {
+const Button = ({name, fontSize, iconLocation, icon}) => {
     const style={
-        marginLeft:'10px',
+        marginLeft:'0px',
         border: '1px solid silver',
+        fontSize: fontSize
     }
    return(
     <ButtonComponent style={style}>
-      {name}&nbsp;&nbsp;{icon && icon}
+      {icon  &&   iconLocation === 'left' && icon}&nbsp;
+      {name}&nbsp;
+      {icon  &&   iconLocation === 'right' && icon}
     </ButtonComponent>
    )
 }

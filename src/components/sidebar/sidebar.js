@@ -6,8 +6,12 @@ import {useSelector, useDispatch} from 'react-redux';
 import sidebar_items from '../../lists/sidebar_items.js';
 import React, { useState } from 'react';
 import {setActuvePage}from '../../redux/actions';
+import Button from '../button';
+import {LeftOutlined, RightOutlined} from '@ant-design/icons'
 
 const {  Sider  } = Layout;
+
+
 
   
   const Sidebar = () => {
@@ -15,13 +19,29 @@ const {  Sider  } = Layout;
     const [collapsed, setCollapsed] = useState(false);
     const {activePage} = useSelector((state) => state.dashboard);
 
+    const CustomTrigger = () => (
+      <Button 
+        name={collapsed? 'Show panel': 'Hide panel'}
+        iconLocation={collapsed? 'right' : 'left'}
+        fontSize={12}
+        icon={collapsed? <RightOutlined /> :<LeftOutlined />  }
+     />
+ );
+ 
+
 
     const setActivePage = (page) => {
       return dispatch(setActuvePage(page))
      }
 
     return (
-        <Sider width={350} className='main'  collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+        <Sider
+           width={350} 
+           className='main'  
+           collapsible 
+           trigger={<CustomTrigger />}
+           collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}
+           >
          <div align="left" className='logo-wrap'>
            Klasha
          </div>
