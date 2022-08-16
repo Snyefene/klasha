@@ -11,9 +11,6 @@ import {LeftOutlined, RightOutlined} from '@ant-design/icons'
 
 const {  Sider  } = Layout;
 
-
-
-  
   const Sidebar = () => {
     const dispatch =  useDispatch();
     const [collapsed, setCollapsed] = useState(false);
@@ -28,8 +25,6 @@ const {  Sider  } = Layout;
      />
  );
  
-
-
     const setActivePage = (page) => {
       return dispatch(setActuvePage(page))
      }
@@ -43,7 +38,7 @@ const {  Sider  } = Layout;
            style={{borderRight:'none'}}
            >
          <div align="left" className='logo-wrap'>
-           Klasha
+           <i> Klasha</i>
          </div>
 
          <div className='menu-divider' >Main {!collapsed && 'pages'}</div>
