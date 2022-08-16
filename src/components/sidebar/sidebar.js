@@ -40,6 +40,7 @@ const {  Sider  } = Layout;
            collapsible 
            trigger={<CustomTrigger />}
            collapsed={ collapsed} onCollapse={(value) => setCollapsed(value)}
+           style={{borderRight:'none'}}
            >
          <div align="left" className='logo-wrap'>
            Klasha
