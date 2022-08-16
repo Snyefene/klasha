@@ -44,8 +44,17 @@ import {
             </Col>
             <Col  span={width <= 500? 24 : 12} align="right" 
                 style={{paddingRight:'40px', marginTop: width <=500 && '-30px'}}>
-              <Switch value={live} onChange={()=> setLive(!live)} />
-              {live && <span>&nbsp;Live  &nbsp;&nbsp;Welcome back, {user}!</span>  }
+              {
+                width >=400 && 
+                <>
+                  <Switch value={live} onChange={()=> setLive(!live)} />
+                 {live && 
+                  <span  style={{ marginTop: width <=500 && '630px'}}>
+                    &nbsp;Live  &nbsp;&nbsp;Welcome back, {user}!
+                </span>  
+                }
+                </>
+              }
             </Col>
           </Row>
           </Header>
