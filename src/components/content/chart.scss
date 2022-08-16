@@ -3,15 +3,18 @@
     text-align: center;
     // min-width: 230px;
 }
-// .highcharts-no-tooltip{
+.highcharts-no-tooltip{
+    display: none;
+}
+.highcharts-axis-title{
+    display: none;
+}
+// .highcharts-axis-labels{
 //     display: none;
 // }
-// .highcharts-axis-title, .highcharts-axis-labels{
-//     display: none;
-// }
-// .highcharts-credits{
-//     display: none;
-// }
+.highcharts-credits{
+    display: none;
+}
 // .highcharts-tick{
 //     display: none;
 // }
