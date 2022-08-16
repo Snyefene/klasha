@@ -3,7 +3,7 @@ import './chart.scss';
 import {useSelector} from 'react-redux';
 
 
-const Chart = ({marginRight, height, chartWidth, type, theme, container}) => {
+const Chart = ({ height,  type, theme, container}) => {
   const {salesData} = useSelector((state) => state.dashboard);
   const {activePeriod} = useSelector((state) => state.dashboard);
   
@@ -35,12 +35,13 @@ const Chart = ({marginRight, height, chartWidth, type, theme, container}) => {
                 plotLines: null,
                 lineWidth: 0,
                 tickLength: 0,
-                visible: false,
+                visible: false
             },
             yAxis: {
                 plotLines: null,
                 gridLineWidth: 0,
-                minorGridLineWidth: 0
+                minorGridLineWidth: 0,
+                visible: false,
             },
             legend: {
               enabled: false
@@ -87,7 +88,7 @@ const Chart = ({marginRight, height, chartWidth, type, theme, container}) => {
   })
     return (
         <div className={`info-graph ${height}`} >
-             <figure style={{width: chartWidth, marginLeft: -marginRight}} className="highcharts-figure ">
+             <figure style={{width: '100%'}} className="highcharts-figure ">
                 <div style={{height:'130px'}} 
                   id={`${container}`}></div>
                 </figure>
